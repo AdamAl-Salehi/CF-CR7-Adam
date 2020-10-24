@@ -65,7 +65,7 @@
     </div>
     <div><ng-container *ngIf="this.totalCos >= 500;else second">Congrats. you get 20% discount on your products</ng-container>
         <ng-template #second>
-            <ng-container *ngIf="this.totalCos >= 200;else third">Congrats. you get 20% discount on your products </ng-container>
+            <ng-container *ngIf="this.totalCos >= 200;else third">Congrats. you get 10% discount on your products </ng-container>
         </ng-template>
         <ng-template #third>unfortunately you get no discounts. Buy more products to get a discount</ng-template></div>
     Total price= €{{ this.totalCos }} <br>
