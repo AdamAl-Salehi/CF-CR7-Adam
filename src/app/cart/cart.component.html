@@ -1,0 +1,73 @@
+<section class="page-section bg-transparent" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase mb-3">Your selected Offers</h2>
+            <h3 class="section-subheading text-muted mb-5">You can complete your Order here</h3>
+        </div>
+
+        <div class="row justify-content-around">
+            <div *ngFor="let item of items" class="col-lg-4 col-sm-6 mb-4">
+                <div class="portfolio-item">
+                    <a class="portfolio-link">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="{{ item.imgThum }}" alt="{{ item.name }}" />
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">{{ item.name }}</div>
+                        <div class="portfolio-caption-subheading text-muted">{{ item.destination }}</div>
+                        <div class="portfolio-caption-heading">€{{ item.price }}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<form [formGroup]="checkoutForm" (ngSubmit)="onSubmit(checkoutForm.value)">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email" formControlName="email">
+        </div>
+        <div class="form-group col-md-6">
+            <label for="name">Name</label>
+            <input type="text" class="form-control" id="name" placeholder="Full name" formControlName="name">
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" formControlName="address">
+    </div>
+    <div class="form-group">
+        <label for="address2">Address 2</label>
+        <input type="text" class="form-control" id="address2" placeholder="Apartment, studio, or floor"
+            formControlName="address2">
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" formControlName="city">
+        </div>
+        <div class="form-group col-md-2">
+            <label for="zip">Zip</label>
+            <input type="text" class="form-control" id="zip" formControlName="zip">
+        </div>
+    </div>
+    <div class="form-group">
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="gridCheck">
+            <label class="form-check-label" for="gridCheck">
+                Subscribe to our newsletter to receive our best offers
+            </label>
+        </div>
+    </div>
+    <div><ng-container *ngIf="this.totalCos >= 500;else second">Congrats. you get 20% discount on your products</ng-container>
+        <ng-template #second>
+            <ng-container *ngIf="this.totalCos >= 200;else third">Congrats. you get 20% discount on your products </ng-container>
+        </ng-template>
+        <ng-template #third>unfortunately you get no discounts. Buy more products to get a discount</ng-template></div>
+    Total price= €{{ this.totalCos }} <br>
+    <button type="submit" class="btn btn-primary mt-3">Confirm purchase</button>
+</form>

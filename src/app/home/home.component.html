@@ -1,0 +1,11 @@
+<div class="home">
+    <p id="description">We will make your Vacation unforgettable</p>
+    <h1 id="servHeader">Services we offer</h1>
+    <div class="row justify-content-between mb-4" *ngFor="let service of services ; index as serviceId">
+        <div class="col-5 my-auto">
+            <h3 class="servName">{{ service.name }}</h3>
+            <p class="servDescr m-auto">{{ service.description }}</p>
+        </div>
+        <div class="col-5"><img src="{{ service.img }}" alt="{{  service.name  }}" class="rounded img-thumbnail servImg"></div>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;500;600&display=swap");
+nav {
+  font-family: "Quicksand", sans-serif;
+}
+li:active {
+  font-size: 1rem;
+  border-color: white;
+  border-left-color: black;
+  border-top-color: black;
+  color: white;
+  background-color: #adadad;
+}

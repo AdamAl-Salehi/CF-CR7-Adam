@@ -1,0 +1,15 @@
+#background {
+  background: url("../assets/background.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+.spacing {
+  padding: 2rem 10rem;
+}
+
+#background2 {
+  background: url("https://data.whicdn.com/images/261502226/original.jpg");
+  background-size: 100%;
+  background-repeat: repeat-y;
+  padding-top: 8rem;
+}

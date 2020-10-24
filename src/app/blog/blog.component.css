@@ -1,0 +1,11 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300;600&display=swap");
+
+h1 {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+  font-family: "Quicksand", sans-serif;
+}
+h4 {
+  font-family: "Quicksand", sans-serif;
+  font-weight: bolder;
+}

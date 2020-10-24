@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@300&display=swap");
+.row {
+  padding: 6rem 0rem;
+}
+h1 {
+  font-family: "Pacifico", cursive;
+}
+h2 {
+  font-family: "Quicksand", sans-serif;
+}
+p {
+  font-size: 0.8rem;
+}
+.background {
+  padding: 10px;
+  background-color: rgba(36, 147, 175, 0.527);
+  border-radius: 20px;
+}
